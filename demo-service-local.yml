@@ -1,0 +1,21 @@
+server:
+  port: 4002
+
+eureka:
+  instance:
+    instance-id: demo-service-instance
+    
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka:8761/eureka
+
+management:
+  endpoints:
+   web:
+    exposure:
+        include: refresh
+        
+restTemplate:
+  uri: http://10.10.28.97:4001/test

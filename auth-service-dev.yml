@@ -1,0 +1,13 @@
+server:
+  port: 4001
+
+eureka:
+  instance:
+    instance-id: auth-service-instance
+    
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://10.10.28.97:8761/eureka
+
